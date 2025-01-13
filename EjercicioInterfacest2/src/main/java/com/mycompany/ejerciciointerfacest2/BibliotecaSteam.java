@@ -3,11 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.mycompany.ejerciciointerfacest2;
-
-/**
- *
- * @author tanuk
- */
+import java.util.*;
 public class BibliotecaSteam extends javax.swing.JFrame {
 
     /**
@@ -27,6 +23,7 @@ public class BibliotecaSteam extends javax.swing.JFrame {
     private void initComponents() {
 
         aniadir = new javax.swing.JPanel();
+        aniadirjuego = new javax.swing.JButton();
         galeria = new javax.swing.JPanel();
         game1 = new javax.swing.JToggleButton();
         game2 = new javax.swing.JButton();
@@ -50,16 +47,12 @@ public class BibliotecaSteam extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        javax.swing.GroupLayout aniadirLayout = new javax.swing.GroupLayout(aniadir);
-        aniadir.setLayout(aniadirLayout);
-        aniadirLayout.setHorizontalGroup(
-            aniadirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 953, Short.MAX_VALUE)
-        );
-        aniadirLayout.setVerticalGroup(
-            aniadirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
+        aniadir.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        aniadirjuego.setText("Añadir Un juego ");
+        aniadirjuego.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        aniadirjuego.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        aniadir.add(aniadirjuego);
 
         getContentPane().add(aniadir, java.awt.BorderLayout.SOUTH);
 
@@ -118,33 +111,14 @@ public class BibliotecaSteam extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(BibliotecaSteam.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(BibliotecaSteam.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(BibliotecaSteam.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(BibliotecaSteam.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
+        HashMap<String, Juego> biblioteca = new HashMap<String, Juego>();
+        Juego Cyberpunk2077 = new Juego("Cyberpunk2077","","CDProject","Ciencia Ficción",2020);
+        System.out.println(Cyberpunk2077.isJugando());
+       
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new BibliotecaSteam().setVisible(true);
+                
             }
         });
     }
@@ -154,6 +128,7 @@ public class BibliotecaSteam extends javax.swing.JFrame {
     private javax.swing.JPanel Interfazusuario;
     private javax.swing.JPanel NombreUsuario;
     private javax.swing.JPanel aniadir;
+    private javax.swing.JButton aniadirjuego;
     private javax.swing.JPanel galeria;
     private javax.swing.JToggleButton game1;
     private javax.swing.JButton game10;
