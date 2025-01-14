@@ -136,12 +136,54 @@ public static HashMap<String, Juego> biblioteca = new HashMap<String, Juego>();
             }
         });
         galeria.add(game5);
+
+        game6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                game6ActionPerformed(evt);
+            }
+        });
         galeria.add(game6);
+
+        game7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                game7ActionPerformed(evt);
+            }
+        });
         galeria.add(game7);
+
+        game8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                game8ActionPerformed(evt);
+            }
+        });
         galeria.add(game8);
+
+        game9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                game9ActionPerformed(evt);
+            }
+        });
         galeria.add(game9);
+
+        game10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                game10ActionPerformed(evt);
+            }
+        });
         galeria.add(game10);
+
+        game11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                game11ActionPerformed(evt);
+            }
+        });
         galeria.add(game11);
+
+        game12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                game12ActionPerformed(evt);
+            }
+        });
         galeria.add(game12);
 
         getContentPane().add(galeria, java.awt.BorderLayout.CENTER);
@@ -178,7 +220,8 @@ public static HashMap<String, Juego> biblioteca = new HashMap<String, Juego>();
 
     private void aniadirjuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aniadirjuegoActionPerformed
       
-       
+       aniadirjuegos frame = new aniadirjuegos();
+       frame.setVisible(true);
        
     }//GEN-LAST:event_aniadirjuegoActionPerformed
 
@@ -221,6 +264,76 @@ public static HashMap<String, Juego> biblioteca = new HashMap<String, Juego>();
           lanzarjuego(game5j);
           }
     }//GEN-LAST:event_game5ActionPerformed
+
+    private void game6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_game6ActionPerformed
+        if(game6.getText()==null || game6.getText().equals("")){
+          
+          }
+        else{
+          Juego game6j = biblioteca.get(game6.getText());
+          lanzarjuego(game6j);
+          }
+    }//GEN-LAST:event_game6ActionPerformed
+
+    private void game7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_game7ActionPerformed
+        if(game7.getText()==null || game7.getText().equals("")){
+          
+          }
+        else{
+          Juego game7j = biblioteca.get(game7.getText());
+          lanzarjuego(game7j);
+          }
+    }//GEN-LAST:event_game7ActionPerformed
+
+    private void game8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_game8ActionPerformed
+        if(game8.getText()==null || game8.getText().equals("")){
+          
+          }
+        else{
+          Juego game8j = biblioteca.get(game8.getText());
+          lanzarjuego(game8j);
+          }
+    }//GEN-LAST:event_game8ActionPerformed
+
+    private void game9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_game9ActionPerformed
+        if(game9.getText()==null || game9.getText().equals("")){
+          
+          }
+        else{
+          Juego game9j = biblioteca.get(game9.getText());
+          lanzarjuego(game9j);
+          }
+    }//GEN-LAST:event_game9ActionPerformed
+
+    private void game10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_game10ActionPerformed
+        if(game10.getText()==null || game10.getText().equals("")){
+          
+          }
+        else{
+          Juego game10j = biblioteca.get(game10.getText());
+          lanzarjuego(game10j);
+          }
+    }//GEN-LAST:event_game10ActionPerformed
+
+    private void game11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_game11ActionPerformed
+        if(game11.getText()==null || game11.getText().equals("")){
+          
+          }
+        else{
+          Juego game11j = biblioteca.get(game11.getText());
+          lanzarjuego(game11j);
+          }
+    }//GEN-LAST:event_game11ActionPerformed
+
+    private void game12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_game12ActionPerformed
+        if(game12.getText()==null || game12.getText().equals("")){
+          
+          }
+        else{
+          Juego game12j = biblioteca.get(game12.getText());
+          lanzarjuego(game12j);
+          }
+    }//GEN-LAST:event_game12ActionPerformed
 
     /**
      * @param args the command line arguments

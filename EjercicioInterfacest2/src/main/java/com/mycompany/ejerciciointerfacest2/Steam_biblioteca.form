@@ -128,18 +128,39 @@
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="game6">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="game6ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="game7">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="game7ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="game8">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="game8ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="game9">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="game9ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="game10">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="game10ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="game11">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="game11ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="game12">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="game12ActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
