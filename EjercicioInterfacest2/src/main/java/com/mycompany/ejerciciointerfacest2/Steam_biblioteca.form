@@ -3,6 +3,9 @@
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[721, 543]"/>
+    </Property>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -105,12 +108,24 @@
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="game2">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="game2ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="game3">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="game3ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="game4">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="game4ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="game5">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="game5ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="game6">
         </Component>

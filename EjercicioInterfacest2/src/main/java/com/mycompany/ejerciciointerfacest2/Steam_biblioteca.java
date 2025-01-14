@@ -11,13 +11,13 @@ import java.util.HashMap;
  * @author Guillermo
  */
 public class Steam_biblioteca extends javax.swing.JFrame {
-
+public static HashMap<String, Juego> biblioteca = new HashMap<String, Juego>();
     /**
      * Creates new form Steam_biblioteca
      */
     public Steam_biblioteca() {
         initComponents();
-        HashMap<String, Juego> biblioteca = new HashMap<String, Juego>();
+        
         Juego Cyberpunk2077 = new Juego("Cyberpunk2077","","CDProject","Ciencia Ficción",2020);
         Juego SuperMarioBross = new Juego("SuperMarioBross","","Nintendo","Plataforma",1985);
         Juego RainWorld = new Juego("RainWorld","","VideoKult","Mundo abierto 2D",2017);
@@ -66,6 +66,7 @@ public class Steam_biblioteca extends javax.swing.JFrame {
         aniadirjuego = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(721, 543));
 
         Interfazusuario.setName(""); // NOI18N
         Interfazusuario.setLayout(new java.awt.GridLayout(1, 1));
@@ -107,9 +108,33 @@ public class Steam_biblioteca extends javax.swing.JFrame {
             }
         });
         galeria.add(game1);
+
+        game2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                game2ActionPerformed(evt);
+            }
+        });
         galeria.add(game2);
+
+        game3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                game3ActionPerformed(evt);
+            }
+        });
         galeria.add(game3);
+
+        game4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                game4ActionPerformed(evt);
+            }
+        });
         galeria.add(game4);
+
+        game5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                game5ActionPerformed(evt);
+            }
+        });
         galeria.add(game5);
         galeria.add(game6);
         galeria.add(game7);
@@ -139,13 +164,63 @@ public class Steam_biblioteca extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void game1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_game1ActionPerformed
-        // TODO add your handling code here:
+        
+        if(game1.getText()==null || game1.getText().equals("")){
+        
+        }
+        else{
+        Juego game1j = biblioteca.get(game1.getText());
+        lanzarjuego(game1j);
+        }
+        
+        
     }//GEN-LAST:event_game1ActionPerformed
 
     private void aniadirjuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aniadirjuegoActionPerformed
-       aniadirjuego frame = new aniadirjuego();
-       frame.setVisible(true);
+      
+       
+       
     }//GEN-LAST:event_aniadirjuegoActionPerformed
+
+    private void game2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_game2ActionPerformed
+       if(game2.getText()==null || game2.getText().equals("")){
+        
+        }
+        else{
+        Juego game2j = biblioteca.get(game2.getText());
+        lanzarjuego(game2j);
+        }
+    }//GEN-LAST:event_game2ActionPerformed
+
+    private void game3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_game3ActionPerformed
+          if(game3.getText()==null || game3.getText().equals("")){
+          
+          }
+          else{
+          Juego game3j = biblioteca.get(game3.getText());
+          lanzarjuego(game3j);
+          }
+    }//GEN-LAST:event_game3ActionPerformed
+
+    private void game4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_game4ActionPerformed
+        if(game4.getText()==null || game4.getText().equals("")){
+          
+          }
+        else{
+          Juego game4j = biblioteca.get(game4.getText());
+          lanzarjuego(game4j);
+          }
+    }//GEN-LAST:event_game4ActionPerformed
+
+    private void game5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_game5ActionPerformed
+        if(game5.getText()==null || game5.getText().equals("")){
+          
+          }
+        else{
+          Juego game5j = biblioteca.get(game5.getText());
+          lanzarjuego(game5j);
+          }
+    }//GEN-LAST:event_game5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -181,6 +256,18 @@ public class Steam_biblioteca extends javax.swing.JFrame {
             }
         });
     }
+    
+    
+    
+    
+    public static void lanzarjuego(Juego j){
+    
+       verjuego frame = new verjuego(j);
+       frame.setVisible(true);
+    
+    }
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Cuenta;
