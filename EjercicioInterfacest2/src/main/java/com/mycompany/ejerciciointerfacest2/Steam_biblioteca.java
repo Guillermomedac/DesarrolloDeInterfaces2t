@@ -4,6 +4,8 @@
  */
 package com.mycompany.ejerciciointerfacest2;
 
+import java.util.HashMap;
+
 /**
  *
  * @author Guillermo
@@ -15,6 +17,20 @@ public class Steam_biblioteca extends javax.swing.JFrame {
      */
     public Steam_biblioteca() {
         initComponents();
+        HashMap<String, Juego> biblioteca = new HashMap<String, Juego>();
+        Juego Cyberpunk2077 = new Juego("Cyberpunk2077","","CDProject","Ciencia Ficción",2020);
+        Juego SuperMarioBross = new Juego("SuperMarioBross","","Nintendo","Plataforma",1985);
+        Juego RainWorld = new Juego("RainWorld","","VideoKult","Mundo abierto 2D",2017);
+        Juego TheBindingOfIsaacRepetence = new Juego("TheBindingOfIsaacRepetence","","	Edmund McMillen","Disparos Rol y Acción",2021);
+        biblioteca.put(Cyberpunk2077.getNombrejuego(),Cyberpunk2077);
+        biblioteca.put(SuperMarioBross.getNombrejuego(),SuperMarioBross);
+        biblioteca.put(RainWorld.getNombrejuego(),RainWorld);
+        biblioteca.put(TheBindingOfIsaacRepetence.getNombrejuego(),TheBindingOfIsaacRepetence);
+        
+        game1.setText(biblioteca.get(Cyberpunk2077.getNombrejuego()).getNombrejuego());
+        game2.setText(biblioteca.get(SuperMarioBross.getNombrejuego()).getNombrejuego());
+        game3.setText(biblioteca.get(RainWorld.getNombrejuego()).getNombrejuego());
+        game4.setText(biblioteca.get(TheBindingOfIsaacRepetence.getNombrejuego()).getNombrejuego());
     }
 
     /**
@@ -26,21 +42,110 @@ public class Steam_biblioteca extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Interfazusuario = new javax.swing.JPanel();
+        NombreUsuario = new javax.swing.JPanel();
+        nombre = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        Cuenta = new javax.swing.JPanel();
+        galeria = new javax.swing.JPanel();
+        game1 = new javax.swing.JToggleButton();
+        game2 = new javax.swing.JButton();
+        game3 = new javax.swing.JButton();
+        game4 = new javax.swing.JButton();
+        game5 = new javax.swing.JButton();
+        game6 = new javax.swing.JButton();
+        game7 = new javax.swing.JButton();
+        game8 = new javax.swing.JButton();
+        game9 = new javax.swing.JButton();
+        game10 = new javax.swing.JButton();
+        game11 = new javax.swing.JButton();
+        game12 = new javax.swing.JButton();
+        aniadir = new javax.swing.JPanel();
+        aniadirjuego = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        Interfazusuario.setName(""); // NOI18N
+        Interfazusuario.setLayout(new java.awt.GridLayout(1, 1));
+
+        NombreUsuario.setLayout(new java.awt.GridLayout(2, 2));
+
+        nombre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        nombre.setText("username");
+        nombre.setFocusable(false);
+        nombre.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        NombreUsuario.add(nombre);
+        NombreUsuario.add(jLabel2);
+        NombreUsuario.add(jLabel1);
+        NombreUsuario.add(jLabel4);
+
+        Interfazusuario.add(NombreUsuario);
+
+        javax.swing.GroupLayout CuentaLayout = new javax.swing.GroupLayout(Cuenta);
+        Cuenta.setLayout(CuentaLayout);
+        CuentaLayout.setHorizontalGroup(
+            CuentaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 360, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+        CuentaLayout.setVerticalGroup(
+            CuentaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 120, Short.MAX_VALUE)
         );
+
+        Interfazusuario.add(Cuenta);
+
+        getContentPane().add(Interfazusuario, java.awt.BorderLayout.NORTH);
+
+        galeria.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        galeria.setLayout(new java.awt.GridLayout(3, 4, 30, 20));
+
+        game1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                game1ActionPerformed(evt);
+            }
+        });
+        galeria.add(game1);
+        galeria.add(game2);
+        galeria.add(game3);
+        galeria.add(game4);
+        galeria.add(game5);
+        galeria.add(game6);
+        galeria.add(game7);
+        galeria.add(game8);
+        galeria.add(game9);
+        galeria.add(game10);
+        galeria.add(game11);
+        galeria.add(game12);
+
+        getContentPane().add(galeria, java.awt.BorderLayout.CENTER);
+
+        aniadir.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        aniadirjuego.setText("Añadir Un juego ");
+        aniadirjuego.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        aniadirjuego.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        aniadirjuego.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                aniadirjuegoActionPerformed(evt);
+            }
+        });
+        aniadir.add(aniadirjuego);
+
+        getContentPane().add(aniadir, java.awt.BorderLayout.SOUTH);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void game1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_game1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_game1ActionPerformed
+
+    private void aniadirjuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aniadirjuegoActionPerformed
+       aniadirjuego frame = new aniadirjuego();
+       frame.setVisible(true);
+    }//GEN-LAST:event_aniadirjuegoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +183,27 @@ public class Steam_biblioteca extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel Cuenta;
+    private javax.swing.JPanel Interfazusuario;
+    private javax.swing.JPanel NombreUsuario;
+    private javax.swing.JPanel aniadir;
+    private javax.swing.JButton aniadirjuego;
+    private javax.swing.JPanel galeria;
+    private javax.swing.JToggleButton game1;
+    private javax.swing.JButton game10;
+    private javax.swing.JButton game11;
+    private javax.swing.JButton game12;
+    private javax.swing.JButton game2;
+    private javax.swing.JButton game3;
+    private javax.swing.JButton game4;
+    private javax.swing.JButton game5;
+    private javax.swing.JButton game6;
+    private javax.swing.JButton game7;
+    private javax.swing.JButton game8;
+    private javax.swing.JButton game9;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel nombre;
     // End of variables declaration//GEN-END:variables
 }
