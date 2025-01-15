@@ -220,7 +220,7 @@ public static HashMap<String, Juego> biblioteca = new HashMap<String, Juego>();
 
     private void aniadirjuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aniadirjuegoActionPerformed
       
-       aniadirjuegos frame = new aniadirjuegos();
+       aniadirjuegos frame = new aniadirjuegos(biblioteca);
        frame.setVisible(true);
        
     }//GEN-LAST:event_aniadirjuegoActionPerformed

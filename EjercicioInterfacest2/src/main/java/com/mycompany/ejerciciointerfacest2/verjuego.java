@@ -13,9 +13,15 @@ public class verjuego extends javax.swing.JFrame {
     /**
      * Creates new form aniadirjuego
      */
+    public verjuego() {
+        initComponents();
+       
+    }
+    
     public verjuego(Juego juego) {
         initComponents();
         this.juego = juego;
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         nombrejuego.setText(juego.getNombrejuego());
     }
 
@@ -88,7 +94,7 @@ public class verjuego extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                //new verjuego().setVisible(true);
+                new verjuego().setVisible(true);
             }
         });
     }

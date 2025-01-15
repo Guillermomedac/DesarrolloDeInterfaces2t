@@ -3,18 +3,25 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.mycompany.ejerciciointerfacest2;
-
+import java.util.HashMap;
 /**
  *
  * @author tanuk
  */
 public class aniadirjuegos extends javax.swing.JFrame {
-
+private HashMap biblioteca;
     /**
      * Creates new form aniadirjuegos
+     * 
      */
-    public aniadirjuegos() {
+     public aniadirjuegos() {
         initComponents();
+    }
+    public aniadirjuegos(HashMap biblioteca) {
+        initComponents();
+        this.biblioteca = biblioteca;
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+
     }
 
     /**
@@ -147,7 +154,15 @@ public class aniadirjuegos extends javax.swing.JFrame {
         
         
         if(check==4){
-            System.out.println("El juego que crearia es: " +gamename.getText() +nameauthor.getText() + gender.getText() + year.getText()  ); 
+            if(biblioteca.containsKey(gamename.getText())){
+            // Mostrar un error
+            }
+            else{
+            biblioteca.put(gamename.getText(),new Juego(gamename.getText(),"",nameauthor.getText(),gender.getText(),Integer.parseInt(year.getText())));
+                System.out.println("Juego Añadido");
+             dispose();
+            }
+            
         }
         
         
