@@ -18,7 +18,7 @@ public static HashMap<String, Juego> biblioteca = new HashMap<String, Juego>();
     public Steam_biblioteca() {
         initComponents();
         
-        Juego Cyberpunk2077 = new Juego("Cyberpunk2077","","CDProject","Ciencia Ficción",2020);
+        Juego Cyberpunk2077 = new Juego("Cyberpunk2077","..\\resoruces\\cyberpunk.jpg","CD PROJECTS","Ciencia Ficción",2020);
         Juego SuperMarioBross = new Juego("SuperMarioBross","","Nintendo","Plataforma",1985);
         Juego RainWorld = new Juego("RainWorld","","VideoKult","Mundo abierto 2D",2017);
         Juego TheBindingOfIsaacRepetence = new Juego("TheBindingOfIsaacRepetence","","	Edmund McMillen","Disparos Rol y Acción",2021);

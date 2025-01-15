@@ -4,6 +4,9 @@
  */
 package com.mycompany.ejerciciointerfacest2;
 
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author Guillermo
@@ -23,6 +26,11 @@ public class verjuego extends javax.swing.JFrame {
         this.juego = juego;
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         nombrejuego.setText(juego.getNombrejuego());
+        nombrecredor.setText(juego.getAutor());
+        tematica.setText(juego.getGenero());
+        fecha.setText(juego.getPublicacion()+"");
+        imagenjuego.setIcon(new ImageIcon(juego.getImagen()));
+        
     }
 
     /**
