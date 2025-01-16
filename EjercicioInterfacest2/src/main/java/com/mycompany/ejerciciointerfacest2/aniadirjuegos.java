@@ -162,8 +162,8 @@ private JButton[] botoneslibres;
             // Mostrar un error
             }
             else{
-            biblioteca.put(gamename.getText(),new Juego(gamename.getText(),"",nameauthor.getText(),gender.getText(),Integer.parseInt(year.getText())));
-                System.out.println("Juego Añadido");
+            biblioteca.put(gamename.getText(),new Juego(gamename.getText(),"",nameauthor.getText(),gender.getText(),Integer.parseInt(year.getText()))); 
+                
                 actualizar(botoneslibres, gamename.getText());
              dispose();
             }

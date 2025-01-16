@@ -18,7 +18,7 @@ public class Juego {
   int publicacion;
   
   
-  public Juego(String nombrejuego, String imagen, String autor, String genero, int publicado){
+  public Juego(String nombrejuego, String imagen, String autor, String genero, int publicacion){
       this.nombrejuego = nombrejuego;
       this.jugando = false;
       this.imagen = imagen;

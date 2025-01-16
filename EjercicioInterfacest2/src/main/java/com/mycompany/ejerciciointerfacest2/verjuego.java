@@ -29,6 +29,7 @@ public class verjuego extends javax.swing.JFrame {
         nombrecredor.setText(juego.getAutor());
         tematica.setText(juego.getGenero());
         fecha.setText(juego.getPublicacion()+"");
+        System.out.println(juego.getPublicacion());
         imagenjuego.setIcon(new ImageIcon(juego.getImagen()));
         if(juego.isJugando()){
             juego.setJugando(true);
@@ -62,6 +63,9 @@ public class verjuego extends javax.swing.JFrame {
         jugado = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(475, 632));
+        setMinimumSize(new java.awt.Dimension(475, 632));
+        setPreferredSize(new java.awt.Dimension(475, 632));
 
         jPanel3.setLayout(new java.awt.GridLayout(1, 2));
         jPanel3.add(imagenjuego);
