@@ -5,32 +5,35 @@
 package com.mycompany.ejerciciointerfacest2;
 
 import java.util.HashMap;
+import javax.swing.JButton;
 
 /**
  *
  * @author Guillermo
  */
 public class Steam_biblioteca extends javax.swing.JFrame {
-public static HashMap<String, Juego> biblioteca = new HashMap<String, Juego>();
-    /**
-     * Creates new form Steam_biblioteca
-     */
+
+    public static HashMap<String, Juego> biblioteca = new HashMap<String, Juego>();
+    public static int contador;
+
     public Steam_biblioteca() {
         initComponents();
-        
-        Juego Cyberpunk2077 = new Juego("Cyberpunk2077","..\\resoruces\\cyberpunk.jpg","CD PROJECTS","Ciencia Ficción",2020);
-        Juego SuperMarioBross = new Juego("SuperMarioBross","","Nintendo","Plataforma",1985);
-        Juego RainWorld = new Juego("RainWorld","","VideoKult","Mundo abierto 2D",2017);
-        Juego TheBindingOfIsaacRepetence = new Juego("TheBindingOfIsaacRepetence","","	Edmund McMillen","Disparos Rol y Acción",2021);
-        biblioteca.put(Cyberpunk2077.getNombrejuego(),Cyberpunk2077);
-        biblioteca.put(SuperMarioBross.getNombrejuego(),SuperMarioBross);
-        biblioteca.put(RainWorld.getNombrejuego(),RainWorld);
-        biblioteca.put(TheBindingOfIsaacRepetence.getNombrejuego(),TheBindingOfIsaacRepetence);
-        
+        this.contador = 0;
+        Juego Cyberpunk2077 = new Juego("Cyberpunk2077", "..\\resoruces\\cyberpunk.jpg", "CD PROJECTS", "Ciencia Ficción", 2020);
+        Juego SuperMarioBross = new Juego("SuperMarioBross", "", "Nintendo", "Plataforma", 1985);
+        Juego RainWorld = new Juego("RainWorld", "", "VideoKult", "Mundo abierto 2D", 2017);
+        Juego TheBindingOfIsaacRepetence = new Juego("TheBindingOfIsaacRepetence", "", "	Edmund McMillen", "Disparos Rol y Acción", 2021);
+        biblioteca.put(Cyberpunk2077.getNombrejuego(), Cyberpunk2077);
+        biblioteca.put(SuperMarioBross.getNombrejuego(), SuperMarioBross);
+        biblioteca.put(RainWorld.getNombrejuego(), RainWorld);
+        biblioteca.put(TheBindingOfIsaacRepetence.getNombrejuego(), TheBindingOfIsaacRepetence);
+
         game1.setText(biblioteca.get(Cyberpunk2077.getNombrejuego()).getNombrejuego());
         game2.setText(biblioteca.get(SuperMarioBross.getNombrejuego()).getNombrejuego());
         game3.setText(biblioteca.get(RainWorld.getNombrejuego()).getNombrejuego());
         game4.setText(biblioteca.get(TheBindingOfIsaacRepetence.getNombrejuego()).getNombrejuego());
+        JButton[] botoneslibres = {game5, game6, game7, game8, game9, game10, game11};
+
     }
 
     /**
@@ -49,6 +52,10 @@ public static HashMap<String, Juego> biblioteca = new HashMap<String, Juego>();
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         Cuenta = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        busqueda = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         galeria = new javax.swing.JPanel();
         game1 = new javax.swing.JToggleButton();
         game2 = new javax.swing.JButton();
@@ -84,16 +91,28 @@ public static HashMap<String, Juego> biblioteca = new HashMap<String, Juego>();
 
         Interfazusuario.add(NombreUsuario);
 
-        javax.swing.GroupLayout CuentaLayout = new javax.swing.GroupLayout(Cuenta);
-        Cuenta.setLayout(CuentaLayout);
-        CuentaLayout.setHorizontalGroup(
-            CuentaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 360, Short.MAX_VALUE)
-        );
-        CuentaLayout.setVerticalGroup(
-            CuentaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 120, Short.MAX_VALUE)
-        );
+        Cuenta.setLayout(new java.awt.GridLayout(2, 2));
+
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel3.setText("Buscar: ");
+        jLabel3.setToolTipText("");
+        Cuenta.add(jLabel3);
+
+        busqueda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                busquedaActionPerformed(evt);
+            }
+        });
+        Cuenta.add(busqueda);
+        Cuenta.add(jLabel5);
+
+        jButton1.setText("buscar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        Cuenta.add(jButton1);
 
         Interfazusuario.add(Cuenta);
 
@@ -206,134 +225,142 @@ public static HashMap<String, Juego> biblioteca = new HashMap<String, Juego>();
     }// </editor-fold>//GEN-END:initComponents
 
     private void game1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_game1ActionPerformed
-        
-        if(game1.getText()==null || game1.getText().equals("")){
-        
+
+        if (game1.getText() == null || game1.getText().equals("")) {
+
+        } else {
+            Juego game1j = biblioteca.get(game1.getText());
+            lanzarjuego(game1j);
         }
-        else{
-        Juego game1j = biblioteca.get(game1.getText());
-        lanzarjuego(game1j);
-        }
-        
-        
+
+
     }//GEN-LAST:event_game1ActionPerformed
 
     private void aniadirjuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aniadirjuegoActionPerformed
-      
-       aniadirjuegos frame = new aniadirjuegos(biblioteca);
-       frame.setVisible(true);
-       
+        JButton[] botoneslibres = {game5, game6, game7, game8, game9, game10, game11};
+        aniadirjuegos frame = new aniadirjuegos(biblioteca,botoneslibres);
+        frame.setVisible(true);
+
     }//GEN-LAST:event_aniadirjuegoActionPerformed
 
     private void game2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_game2ActionPerformed
-       if(game2.getText()==null || game2.getText().equals("")){
-        
-        }
-        else{
-        Juego game2j = biblioteca.get(game2.getText());
-        lanzarjuego(game2j);
+        if (game2.getText() == null || game2.getText().equals("")) {
+
+        } else {
+            Juego game2j = biblioteca.get(game2.getText());
+            lanzarjuego(game2j);
         }
     }//GEN-LAST:event_game2ActionPerformed
 
     private void game3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_game3ActionPerformed
-          if(game3.getText()==null || game3.getText().equals("")){
-          
-          }
-          else{
-          Juego game3j = biblioteca.get(game3.getText());
-          lanzarjuego(game3j);
-          }
+        if (game3.getText() == null || game3.getText().equals("")) {
+
+        } else {
+            Juego game3j = biblioteca.get(game3.getText());
+            lanzarjuego(game3j);
+        }
     }//GEN-LAST:event_game3ActionPerformed
 
     private void game4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_game4ActionPerformed
-        if(game4.getText()==null || game4.getText().equals("")){
-          
-          }
-        else{
-          Juego game4j = biblioteca.get(game4.getText());
-          lanzarjuego(game4j);
-          }
+        if (game4.getText() == null || game4.getText().equals("")) {
+
+        } else {
+            Juego game4j = biblioteca.get(game4.getText());
+            lanzarjuego(game4j);
+        }
     }//GEN-LAST:event_game4ActionPerformed
 
     private void game5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_game5ActionPerformed
-        if(game5.getText()==null || game5.getText().equals("")){
-          
-          }
-        else{
-          Juego game5j = biblioteca.get(game5.getText());
-          lanzarjuego(game5j);
-          }
+        if (game5.getText() == null || game5.getText().equals("")) {
+
+        } else {
+            Juego game5j = biblioteca.get(game5.getText());
+            lanzarjuego(game5j);
+        }
     }//GEN-LAST:event_game5ActionPerformed
 
     private void game6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_game6ActionPerformed
-        if(game6.getText()==null || game6.getText().equals("")){
-          
-          }
-        else{
-          Juego game6j = biblioteca.get(game6.getText());
-          lanzarjuego(game6j);
-          }
+        if (game6.getText() == null || game6.getText().equals("")) {
+
+        } else {
+            Juego game6j = biblioteca.get(game6.getText());
+            lanzarjuego(game6j);
+        }
     }//GEN-LAST:event_game6ActionPerformed
 
     private void game7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_game7ActionPerformed
-        if(game7.getText()==null || game7.getText().equals("")){
-          
-          }
-        else{
-          Juego game7j = biblioteca.get(game7.getText());
-          lanzarjuego(game7j);
-          }
+        if (game7.getText() == null || game7.getText().equals("")) {
+
+        } else {
+            Juego game7j = biblioteca.get(game7.getText());
+            lanzarjuego(game7j);
+        }
     }//GEN-LAST:event_game7ActionPerformed
 
     private void game8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_game8ActionPerformed
-        if(game8.getText()==null || game8.getText().equals("")){
-          
-          }
-        else{
-          Juego game8j = biblioteca.get(game8.getText());
-          lanzarjuego(game8j);
-          }
+        if (game8.getText() == null || game8.getText().equals("")) {
+
+        } else {
+            Juego game8j = biblioteca.get(game8.getText());
+            lanzarjuego(game8j);
+        }
     }//GEN-LAST:event_game8ActionPerformed
 
     private void game9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_game9ActionPerformed
-        if(game9.getText()==null || game9.getText().equals("")){
-          
-          }
-        else{
-          Juego game9j = biblioteca.get(game9.getText());
-          lanzarjuego(game9j);
-          }
+        if (game9.getText() == null || game9.getText().equals("")) {
+
+        } else {
+            Juego game9j = biblioteca.get(game9.getText());
+            lanzarjuego(game9j);
+        }
     }//GEN-LAST:event_game9ActionPerformed
 
     private void game10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_game10ActionPerformed
-        if(game10.getText()==null || game10.getText().equals("")){
-          
-          }
-        else{
-          Juego game10j = biblioteca.get(game10.getText());
-          lanzarjuego(game10j);
-          }
+        if (game10.getText() == null || game10.getText().equals("")) {
+
+        } else {
+            Juego game10j = biblioteca.get(game10.getText());
+            lanzarjuego(game10j);
+        }
     }//GEN-LAST:event_game10ActionPerformed
 
     private void game11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_game11ActionPerformed
-        if(game11.getText()==null || game11.getText().equals("")){
-          
-          }
-        else{
-          Juego game11j = biblioteca.get(game11.getText());
-          lanzarjuego(game11j);
-          }
+        if (game11.getText() == null || game11.getText().equals("")) {
+
+        } else {
+            Juego game11j = biblioteca.get(game11.getText());
+            lanzarjuego(game11j);
+        }
     }//GEN-LAST:event_game11ActionPerformed
 
     private void game12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_game12ActionPerformed
-        if(game12.getText()==null || game12.getText().equals("")){
-          
-          }
-        else{
-          Juego game12j = biblioteca.get(game12.getText());
-          lanzarjuego(game12j);
-          }
+        if (game12.getText() == null || game12.getText().equals("")) {
+
+        } else {
+            Juego game12j = biblioteca.get(game12.getText());
+            lanzarjuego(game12j);
+        }
     }//GEN-LAST:event_game12ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+        String key = busqueda.getText();
+        if (biblioteca.containsKey(key)) {
+
+            // game1.setText(biblioteca.get(key).getNombrejuego());
+            Juego game = biblioteca.get(key);
+            lanzarjuego(game);
+
+        } else {
+
+        }
+
+
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void busquedaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_busquedaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_busquedaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -369,18 +396,30 @@ public static HashMap<String, Juego> biblioteca = new HashMap<String, Juego>();
             }
         });
     }
-    
-    
-    
-    
-    public static void lanzarjuego(Juego j){
-    
-       verjuego frame = new verjuego(j);
-       frame.setVisible(true);
-    
+
+    public int getContador() {
+        return contador;
     }
+
+    public void setContador(int contador) {
+        this.contador = contador;
+    }
+
     
-    
+    public static void lanzarjuego(Juego j) {
+
+        verjuego frame = new verjuego(j);
+        frame.setVisible(true);
+
+    }
+
+    public static void actualizar(JButton[] botoneslibres,String nombre) {
+        botoneslibres[contador].setText(nombre);
+        contador++;
+        
+        
+    }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Cuenta;
@@ -388,6 +427,7 @@ public static HashMap<String, Juego> biblioteca = new HashMap<String, Juego>();
     private javax.swing.JPanel NombreUsuario;
     private javax.swing.JPanel aniadir;
     private javax.swing.JButton aniadirjuego;
+    private javax.swing.JTextField busqueda;
     private javax.swing.JPanel galeria;
     private javax.swing.JToggleButton game1;
     private javax.swing.JButton game10;
@@ -401,9 +441,12 @@ public static HashMap<String, Juego> biblioteca = new HashMap<String, Juego>();
     private javax.swing.JButton game7;
     private javax.swing.JButton game8;
     private javax.swing.JButton game9;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel nombre;
     // End of variables declaration//GEN-END:variables
 }

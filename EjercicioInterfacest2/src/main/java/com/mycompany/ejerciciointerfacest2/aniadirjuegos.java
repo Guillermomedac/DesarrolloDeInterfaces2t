@@ -3,13 +3,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.mycompany.ejerciciointerfacest2;
+import static com.mycompany.ejerciciointerfacest2.Steam_biblioteca.actualizar;
 import java.util.HashMap;
+import javax.swing.JButton;
 /**
  *
  * @author tanuk
  */
 public class aniadirjuegos extends javax.swing.JFrame {
 private HashMap biblioteca;
+private JButton[] botoneslibres;
     /**
      * Creates new form aniadirjuegos
      * 
@@ -17,9 +20,10 @@ private HashMap biblioteca;
      public aniadirjuegos() {
         initComponents();
     }
-    public aniadirjuegos(HashMap biblioteca) {
+    public aniadirjuegos(HashMap biblioteca,JButton[] botoneslibres) {
         initComponents();
         this.biblioteca = biblioteca;
+        this.botoneslibres = botoneslibres;
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
     }
@@ -160,6 +164,7 @@ private HashMap biblioteca;
             else{
             biblioteca.put(gamename.getText(),new Juego(gamename.getText(),"",nameauthor.getText(),gender.getText(),Integer.parseInt(year.getText())));
                 System.out.println("Juego Añadido");
+                actualizar(botoneslibres, gamename.getText());
              dispose();
             }
             
