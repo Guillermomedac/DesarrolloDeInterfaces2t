@@ -30,6 +30,15 @@ public class verjuego extends javax.swing.JFrame {
         tematica.setText(juego.getGenero());
         fecha.setText(juego.getPublicacion()+"");
         imagenjuego.setIcon(new ImageIcon(juego.getImagen()));
+        if(juego.isJugando()){
+            juego.setJugando(true);
+            jugado.setSelected(true);
+        }
+        else{
+        jugado.setSelected(false);
+        }
+            
+        
         
     }
 
@@ -42,6 +51,7 @@ public class verjuego extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel3 = new javax.swing.JPanel();
         imagenjuego = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
@@ -49,10 +59,12 @@ public class verjuego extends javax.swing.JFrame {
         nombrecredor = new javax.swing.JLabel();
         tematica = new javax.swing.JLabel();
         fecha = new javax.swing.JLabel();
+        jugado = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new java.awt.GridLayout(1, 2));
-        getContentPane().add(imagenjuego);
+
+        jPanel3.setLayout(new java.awt.GridLayout(1, 2));
+        jPanel3.add(imagenjuego);
 
         jPanel1.setLayout(new java.awt.GridLayout(1, 2));
 
@@ -66,10 +78,30 @@ public class verjuego extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2);
 
-        getContentPane().add(jPanel1);
+        jPanel3.add(jPanel1);
+
+        getContentPane().add(jPanel3, java.awt.BorderLayout.CENTER);
+
+        jugado.setText("Jugado");
+        jugado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jugadoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jugado, java.awt.BorderLayout.SOUTH);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jugadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jugadoActionPerformed
+        if(jugado.isSelected()){
+        juego.setJugando(true);
+        }
+        else{
+        juego.setJugando(false);
+        }
+        
+    }//GEN-LAST:event_jugadoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -112,6 +144,8 @@ public class verjuego extends javax.swing.JFrame {
     private javax.swing.JLabel imagenjuego;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JCheckBox jugado;
     private javax.swing.JLabel nombrecredor;
     private javax.swing.JLabel nombrejuego;
     private javax.swing.JLabel tematica;
