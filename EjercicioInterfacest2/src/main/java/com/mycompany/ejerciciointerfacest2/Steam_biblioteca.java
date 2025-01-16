@@ -4,6 +4,7 @@
  */
 package com.mycompany.ejerciciointerfacest2;
 
+import java.net.InetAddress;
 import java.util.HashMap;
 import javax.swing.JButton;
 
@@ -33,6 +34,16 @@ public class Steam_biblioteca extends javax.swing.JFrame {
         game3.setText(biblioteca.get(RainWorld.getNombrejuego()).getNombrejuego());
         game4.setText(biblioteca.get(TheBindingOfIsaacRepetence.getNombrejuego()).getNombrejuego());
         JButton[] botoneslibres = {game5, game6, game7, game8, game9, game10, game11};
+        
+        
+        
+        try{
+        InetAddress localHost = InetAddress.getLocalHost();
+        System.out.println(localHost.getHostName());
+        nombre.setText(localHost.getHostName());
+        }
+        catch(Exception e){
+        }
 
     }
 
