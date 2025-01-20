@@ -30,7 +30,9 @@ public class verjuego extends javax.swing.JFrame {
         tematica.setText(juego.getGenero());
         fecha.setText(juego.getPublicacion()+"");
         System.out.println(juego.getPublicacion());
-        imagenjuego.setIcon(new ImageIcon(juego.getImagen()));
+       ImageIcon icono = new ImageIcon(getClass().getResource(juego.getImagen()));
+       imagenjuego.setIcon(icono);
+        System.out.println(juego.getImagen());
         if(juego.isJugando()){
             juego.setJugando(true);
             jugado.setSelected(true);

@@ -5,6 +5,7 @@
 package com.mycompany.ejerciciointerfacest2;
 
 import java.net.InetAddress;
+import java.net.URL;
 import java.util.HashMap;
 import javax.swing.JButton;
 
@@ -20,10 +21,14 @@ public class Steam_biblioteca extends javax.swing.JFrame {
     public Steam_biblioteca() {
         initComponents();
         this.contador = 0;
-        Juego Cyberpunk2077 = new Juego("Cyberpunk2077", "..\\resoruces\\cyberpunk.jpg", "CD PROJECTS", "Ciencia Ficción",2020);
-        Juego SuperMarioBross = new Juego("SuperMarioBross", "", "Nintendo", "Plataforma",1985);
-        Juego RainWorld = new Juego("RainWorld", "", "VideoKult", "Mundo abierto 2D",2017);
-        Juego TheBindingOfIsaacRepetence = new Juego("TheBindingOfIsaacRepetence", "", "Edmund McMillen", "Disparos Rol y Acción",2021);
+      
+        
+       
+        
+        Juego Cyberpunk2077 = new Juego("Cyberpunk2077","/images/cyberpunk.jpg", "CD PROJECTS", "Ciencia Ficción",2020);
+        Juego SuperMarioBross = new Juego("SuperMarioBross", "/images/Mario-Bros.jpg", "Nintendo", "Plataforma",1985);
+        Juego RainWorld = new Juego("RainWorld", "/images/rainworld.jpg", "VideoKult", "Mundo abierto 2D",2017);
+        Juego TheBindingOfIsaacRepetence = new Juego("TheBindingOfIsaacRepetence", "/images/rainworld.jpg", "Edmund McMillen", "Disparos Rol y Acción",2021);
         biblioteca.put(Cyberpunk2077.getNombrejuego(), Cyberpunk2077);
         biblioteca.put(SuperMarioBross.getNombrejuego(), SuperMarioBross);
         biblioteca.put(RainWorld.getNombrejuego(), RainWorld);
@@ -33,7 +38,7 @@ public class Steam_biblioteca extends javax.swing.JFrame {
         game2.setText(biblioteca.get(SuperMarioBross.getNombrejuego()).getNombrejuego());
         game3.setText(biblioteca.get(RainWorld.getNombrejuego()).getNombrejuego());
         game4.setText(biblioteca.get(TheBindingOfIsaacRepetence.getNombrejuego()).getNombrejuego());
-        JButton[] botoneslibres = {game5, game6, game7, game8, game9, game10, game11};
+        JButton[] botoneslibres = {game5, game6, game7, game8, game9, game10, game11, game12};
         
         
         
@@ -426,7 +431,9 @@ public class Steam_biblioteca extends javax.swing.JFrame {
 
     public static void actualizar(JButton[] botoneslibres,String nombre) {
         botoneslibres[contador].setText(nombre);
+        System.out.println("Se introduce en la posicion " + contador);
         contador++;
+        System.out.println("ahora el contador vale"+contador);
         
         
     }
