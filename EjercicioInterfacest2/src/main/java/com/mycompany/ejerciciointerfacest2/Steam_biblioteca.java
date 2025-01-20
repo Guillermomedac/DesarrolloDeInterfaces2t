@@ -434,9 +434,11 @@ public class Steam_biblioteca extends javax.swing.JFrame {
         System.out.println("Se introduce en la posicion " + contador);
         contador++;
         System.out.println("ahora el contador vale"+contador);
-        
-        
     }
+    
+    
+ 
+    
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

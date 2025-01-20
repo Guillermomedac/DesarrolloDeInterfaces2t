@@ -87,7 +87,6 @@ private JButton[] botoneslibres;
         Imagen.setText("Imagen");
         jPanel1.add(Imagen);
 
-        img.setText("jTextField1");
         img.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 imgActionPerformed(evt);
