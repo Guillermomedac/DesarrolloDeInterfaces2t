@@ -52,10 +52,12 @@ private JButton[] botoneslibres;
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Añadir Juego");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createEmptyBorder(20, 5, 20, 0));
         jPanel1.setLayout(new java.awt.GridLayout(5, 2, 0, 10));
 
+        jLabel1.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel1.setText("Nombre Del Juego");
         jPanel1.add(jLabel1);
 
@@ -66,10 +68,12 @@ private JButton[] botoneslibres;
         });
         jPanel1.add(gamename);
 
+        nombre.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         nombre.setText("Nombre Del Autor");
         jPanel1.add(nombre);
         jPanel1.add(nameauthor);
 
+        genero.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         genero.setText("Genero");
         jPanel1.add(genero);
 
@@ -80,10 +84,12 @@ private JButton[] botoneslibres;
         });
         jPanel1.add(gender);
 
+        aniopubli.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         aniopubli.setText("Año De Publicación");
         jPanel1.add(aniopubli);
         jPanel1.add(year);
 
+        Imagen.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         Imagen.setText("Imagen");
         jPanel1.add(Imagen);
 

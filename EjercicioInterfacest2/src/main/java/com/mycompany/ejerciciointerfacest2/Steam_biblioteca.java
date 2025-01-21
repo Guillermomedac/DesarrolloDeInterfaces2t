@@ -89,13 +89,16 @@ public class Steam_biblioteca extends javax.swing.JFrame {
         aniadirjuego = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(721, 543));
+        setTitle("Biblioteca");
+        setMinimumSize(new java.awt.Dimension(831, 603));
+        setPreferredSize(new java.awt.Dimension(831, 603));
 
         Interfazusuario.setName(""); // NOI18N
         Interfazusuario.setLayout(new java.awt.GridLayout(1, 1));
 
         NombreUsuario.setLayout(new java.awt.GridLayout(2, 2));
 
+        nombre.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         nombre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         nombre.setText("username");
         nombre.setFocusable(false);
@@ -109,6 +112,7 @@ public class Steam_biblioteca extends javax.swing.JFrame {
 
         Cuenta.setLayout(new java.awt.GridLayout(2, 2));
 
+        jLabel3.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel3.setText("Buscar: ");
         jLabel3.setToolTipText("");
@@ -122,6 +126,7 @@ public class Steam_biblioteca extends javax.swing.JFrame {
         Cuenta.add(busqueda);
         Cuenta.add(jLabel5);
 
+        jButton1.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         jButton1.setText("buscar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,6 +142,7 @@ public class Steam_biblioteca extends javax.swing.JFrame {
         galeria.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10));
         galeria.setLayout(new java.awt.GridLayout(3, 4, 30, 20));
 
+        game1.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         game1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 game1ActionPerformed(evt);
@@ -144,6 +150,7 @@ public class Steam_biblioteca extends javax.swing.JFrame {
         });
         galeria.add(game1);
 
+        game2.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         game2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 game2ActionPerformed(evt);
@@ -151,6 +158,7 @@ public class Steam_biblioteca extends javax.swing.JFrame {
         });
         galeria.add(game2);
 
+        game3.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         game3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 game3ActionPerformed(evt);
@@ -158,6 +166,7 @@ public class Steam_biblioteca extends javax.swing.JFrame {
         });
         galeria.add(game3);
 
+        game4.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         game4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 game4ActionPerformed(evt);
@@ -165,6 +174,7 @@ public class Steam_biblioteca extends javax.swing.JFrame {
         });
         galeria.add(game4);
 
+        game5.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         game5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 game5ActionPerformed(evt);
@@ -172,6 +182,7 @@ public class Steam_biblioteca extends javax.swing.JFrame {
         });
         galeria.add(game5);
 
+        game6.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         game6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 game6ActionPerformed(evt);
@@ -179,6 +190,7 @@ public class Steam_biblioteca extends javax.swing.JFrame {
         });
         galeria.add(game6);
 
+        game7.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         game7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 game7ActionPerformed(evt);
@@ -186,6 +198,7 @@ public class Steam_biblioteca extends javax.swing.JFrame {
         });
         galeria.add(game7);
 
+        game8.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         game8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 game8ActionPerformed(evt);
@@ -193,6 +206,7 @@ public class Steam_biblioteca extends javax.swing.JFrame {
         });
         galeria.add(game8);
 
+        game9.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         game9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 game9ActionPerformed(evt);
@@ -200,6 +214,7 @@ public class Steam_biblioteca extends javax.swing.JFrame {
         });
         galeria.add(game9);
 
+        game10.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         game10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 game10ActionPerformed(evt);
@@ -207,6 +222,7 @@ public class Steam_biblioteca extends javax.swing.JFrame {
         });
         galeria.add(game10);
 
+        game11.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         game11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 game11ActionPerformed(evt);
@@ -214,6 +230,7 @@ public class Steam_biblioteca extends javax.swing.JFrame {
         });
         galeria.add(game11);
 
+        game12.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         game12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 game12ActionPerformed(evt);
@@ -370,6 +387,8 @@ public class Steam_biblioteca extends javax.swing.JFrame {
         } else {
 
         }
+        
+        busqueda.setText("");
 
 
     }//GEN-LAST:event_jButton1ActionPerformed

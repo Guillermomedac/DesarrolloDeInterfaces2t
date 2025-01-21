@@ -65,21 +65,38 @@ public class verjuego extends javax.swing.JFrame {
         jugado = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(475, 632));
+        setTitle("Visor de juegos");
         setMinimumSize(new java.awt.Dimension(475, 632));
-        setPreferredSize(new java.awt.Dimension(475, 632));
 
         jPanel3.setLayout(new java.awt.GridLayout(1, 2));
+
+        imagenjuego.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jPanel3.add(imagenjuego);
 
         jPanel1.setLayout(new java.awt.GridLayout(1, 2));
 
         jPanel2.setLayout(new java.awt.GridLayout(4, 0));
 
+        nombrejuego.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        nombrejuego.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        nombrejuego.setText("a");
         nombrejuego.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel2.add(nombrejuego);
+
+        nombrecredor.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        nombrecredor.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        nombrecredor.setText("a");
         jPanel2.add(nombrecredor);
+        nombrecredor.getAccessibleContext().setAccessibleName("a");
+
+        tematica.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        tematica.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tematica.setText("a");
         jPanel2.add(tematica);
+
+        fecha.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        fecha.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        fecha.setText("a");
         jPanel2.add(fecha);
 
         jPanel1.add(jPanel2);
@@ -88,6 +105,7 @@ public class verjuego extends javax.swing.JFrame {
 
         getContentPane().add(jPanel3, java.awt.BorderLayout.CENTER);
 
+        jugado.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
         jugado.setText("Jugado");
         jugado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
